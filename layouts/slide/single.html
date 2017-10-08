@@ -1,7 +1,15 @@
-<textarea id="source">
+<head>
+  <title>
+    {{ .Title }} | {{ .Site.Title }}
+  </title>
+  {{ partial "head/favicon.html" . }}
+</head>
+<body>
+  <textarea id="source">
 {{ .RawContent }}
-</textarea>
-<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
-<script>
-  var slideshow = remark.create();
-</script>
+  </textarea>
+  <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+  <script>
+    var slideshow = remark.create();
+  </script>
+</body>
